@@ -1,4 +1,5 @@
 sudo: required
+
 services:
     - docker
 
@@ -13,11 +14,11 @@ after_success:
     - docker build -t janakasteph/multi-nginx ./nginx
     - docker build -t janakasteph/multi-server ./server
     - docker build -t janakasteph/multi-worker ./worker
-
+    # Log in to Docker Hub
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-
-    -docker push janakasteph/multi-client
-    -docker push janakasteph/multi-nginx
-    -docker push janakasteph/multi-server
-    -docker push janakasteph/multi-worker
+    # Push to Docker Hub
+    - docker push janakasteph/multi-client
+    - docker push janakasteph/multi-nginx
+    - docker push janakasteph/multi-server
+    - docker push janakasteph/multi-worker
     
