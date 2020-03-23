@@ -1,0 +1,2 @@
+docker build -t janakasteph/multi-client .
+docker push janakasteph/multi-client
