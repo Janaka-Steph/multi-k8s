@@ -27,3 +27,8 @@ kubectl get svc -n ingress-nginx
 kubectl apply -f k8s-dashboard.yaml
 kubectl proxy
 Visit: http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
+
+// Add google cloud secret in Travis
+gem install travis -v 1.8.10
+travis login --com
+travis encrypt-file service-account.json -r Janaka-Steph/multi-k8s --com

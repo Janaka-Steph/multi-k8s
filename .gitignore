@@ -1,1 +1,4 @@
 .DS_STORE
+
+# Google Cloud secret for Travis
+service-account.json
