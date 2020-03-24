@@ -1,2 +1,29 @@
 docker build -t janakasteph/multi-client .
 docker push janakasteph/multi-client
+
+docker system prune
+
+kubectl apply -f k8s  
+kubectl delete -f k8s  
+
+kubectl get deployments
+kubectl get pods
+kubectl get services
+kubectl get pv
+kubectl get pvc
+kubectl get secrets
+
+kubectl logs server-deployment-6c7459d96f-8hrf4
+
+kubectl get storageclass
+kubectl describe storageclass
+
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=password123
+
+kubectl get svc -n ingress-nginx
+
+
+// Dashboard
+kubectl apply -f k8s-dashboard.yaml
+kubectl proxy
+Visit: http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
