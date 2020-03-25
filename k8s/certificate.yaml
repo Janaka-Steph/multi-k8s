@@ -11,10 +11,3 @@ spec:
   dnsNames:
     - rogue-paprika.top
     - www.rogue-paprika.top
-  acme:
-    config:
-      - http01:
-          ingressClass: nginx
-        domains: 
-          - rogue-paprika.top
-          - www.rogue-paprika.top  
